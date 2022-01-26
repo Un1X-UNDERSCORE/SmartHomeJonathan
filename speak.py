@@ -19,6 +19,7 @@ if not exists(dirr):
 
 #Say function
 def say(text):
+    print(text)
     if not text or ')' in text or '(' in text:
         return
     #Convert text to hash for file name

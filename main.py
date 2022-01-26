@@ -1,5 +1,5 @@
-import speak
+from speak import say
 
 while True:
     text = input('What to say: ')
-    speak.say(text)
+    say(text)
