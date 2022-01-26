@@ -19,7 +19,7 @@ if not exists(dirr):
 
 #Say function
 def say(text):
-    if not text:
+    if not text or ')' in text or '(' in text:
         return
     #Convert text to hash for file name
     filename = md5(text.encode()).hexdigest()
