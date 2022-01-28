@@ -8,7 +8,8 @@ try:
     from hashlib import md5
     from os.path import exists
     from os import mkdir
-    import simpleaudio as sa
+    from pygame import mixer
+    mixer.init()
 except:
     print("""You have to install the modules: playsound and gtts. Use: 'pip3 install playsound' and 'pip3 install gtts' to install the modules""")
     quit()
@@ -32,4 +33,5 @@ def say(text):
         speak = gTTS(text=text, lang=lang, slow=False)
         speak.save(path)
     #Play the sound file
-    wave_obj = sa.PlayObject(path)
+    mixer.music.load(path)
+    mixer.music.play()
