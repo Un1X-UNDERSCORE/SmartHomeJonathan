@@ -8,6 +8,7 @@ try:
     from hashlib import md5
     from os.path import exists
     from os import mkdir, environ
+    from time import sleep
     environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     from pygame.mixer import init, music
     init()
@@ -21,6 +22,8 @@ if not exists(dirr):
 
 #Say function
 def say(text):
+    while music.get_busy() == True:
+        sleep(0.1)
     print(text)
     if not text or ')' in text or '(' in text:
         return
