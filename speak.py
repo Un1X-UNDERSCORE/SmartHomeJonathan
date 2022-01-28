@@ -7,9 +7,10 @@ try:
     from gtts import gTTS
     from hashlib import md5
     from os.path import exists
-    from os import mkdir
-    from pygame import mixer
-    mixer.init()
+    from os import mkdir, environ
+    environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
+    from pygame.mixer import init, music
+    init()
 except:
     print("""You have to install the modules: playsound and gtts. Use: 'pip3 install playsound' and 'pip3 install gtts' to install the modules""")
     quit()
@@ -33,5 +34,5 @@ def say(text):
         speak = gTTS(text=text, lang=lang, slow=False)
         speak.save(path)
     #Play the sound file
-    mixer.music.load(path)
-    mixer.music.play()
+    music.load(path)
+    music.play()

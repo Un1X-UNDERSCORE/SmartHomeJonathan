@@ -1,6 +1,8 @@
 import neuralintents
+from coremodules import core
 
-n = neuralintents.GenericAssistant('intents.json')
+mappings = {'meme' : core.meme}
+n = neuralintents.GenericAssistant('intents.json', intent_methods=mappings)
 
 n.train_model()
 n.save_model()

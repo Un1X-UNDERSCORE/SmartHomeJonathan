@@ -1,33 +1,33 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","eyo", "Hello", "Good day"],
-     "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
-     "context": [""]
+     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","eyo", "Hello", "Good day", "hi"],
+     "responses": ["Hello!", "Hi sir", "Hello there", "Yes sir?", "Hi, how are you?"],
+     "context_set": [""]
     },
     {"tag": "goodbye",
-     "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
-     "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
-     "context": [""]
+     "patterns": ["Bye", "See you later", "Goodbye", "see you later", "Till next time"],
+     "responses": ["See you!", "Have a nice day", "Bye!" , "Goodbye sir!"],
+     "context_set": [""]
     },
     {"tag": "thanks",
      "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
-     "responses": ["Happy to help!", "Any time!", "My pleasure"],
-     "context": [""]
+     "responses": ["Happy to help!", "No problem", "My pleasure"],
+     "context_set": [""]
     },
     {"tag": "noanswer",
-     "patterns": [],
+     "patterns": [""],
      "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
-     "context": [""]
+     "context_set": [""]
     },
     {"tag": "options",
      "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
      "responses": ["help"],
-     "context": [""]
+     "context_set": [""]
     },
     {"tag": "meme",
-        "patterns": ["69", "420", "lol", "meme", "lmao", "xd", "lol"],
-        "responses": ["memememme"],
-        "context": [""]
+     "patterns": ["69", "420", "lol", "meme", "lmao", "xd", "lol"],
+     "responses": ["Ahh yes you are verry funny", "69, 420... funny numbers"],
+     "context_set": [""]
     }
 ]
 }
