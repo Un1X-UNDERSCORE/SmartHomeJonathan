@@ -13,9 +13,6 @@ __pycache__/
 assistant_model_classes.pkl
 assistant_model_words.pkl
 assistant_model.h5
-*.pkl
-*.h5
-assistant_model.h5
 
 notes.txt
 
