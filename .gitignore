@@ -6,12 +6,15 @@ __pycache__/
 # C extensions
 *.so
 
+# My own gitignores
 speech/
 __pycache__/
 
 assistant_model_classes.pkl
 assistant_model_words.pkl
 assistant_model.h5
+
+notes.txt
 
 # Distribution / packaging
 .Python

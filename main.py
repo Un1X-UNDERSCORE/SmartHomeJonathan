@@ -4,7 +4,7 @@ import neuralintents
 from cores.coremodules import core
 
 # Mappings
-mappings = {'openminecraft' : core.minecraft, 'addnote':core.addnote, 'removenote':core.removenote, 'listnotes':core.listnotes}
+mappings = {'addnote':core.addnote, 'removenote':core.removenote, 'listnotes':core.listnotes}
 # Define Neural Networks
 n = neuralintents.GenericAssistant('intents.json', intent_methods=mappings)
 

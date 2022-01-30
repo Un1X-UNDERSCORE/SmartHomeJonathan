@@ -1,2 +1,3 @@
 # SmartHomeJonathan
+
 Home assistant
