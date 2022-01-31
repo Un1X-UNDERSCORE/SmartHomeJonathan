@@ -40,6 +40,27 @@ def say(text):
     music.load(path)
     music.play()
 
+#Say function
+def ask(text):
+    while music.get_busy() == True:
+        sleep(0.1)
+    if not text or ')' in text or '(' in text:
+        return
+    #Convert text to hash for file name
+    filename = md5(text.encode()).hexdigest()
+    #Make path
+    path = f"{dirr}{filename}.mp3"
+    #Check if file allready exists
+    if not exists(path):
+        #If not generate the file
+        speak = gTTS(text=text, lang=lang, slow=False)
+        speak.save(path)
+    #Play the sound file
+    music.load(path)
+    music.play()
+    test = input(text).lower()
+    return test
+
 #Generate sound file function
 def gen(text):
     if not text or ')' in text or '(' in text:

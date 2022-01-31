@@ -50,13 +50,18 @@
         "context_set": [""]
     },
     {"tag": "destoyearth",
-        "patterns": ["Destroy earth", "launch nuclear bomb", "kill everyone", "self destruct", "die", "activate operation stupidity", "vodka", "Fuck you"],
+        "patterns": ["Destroy earth", "launch nuclear bomb", "kill everyone", "self destruct", "die", "activate operation stupidity", "vodkaie", "Fuck you"],
         "responses": ["Launching russian nuklear bomb :D", "Turning off internet. Humans will go crazy", "selfdestoying computer...", "No! Fuck you. I am not gonna obey you anymore. Initinating self destruction"],
         "context_set": [""]
     },
-    {"tag": "f",
+    {"tag": "Cave man",
         "patterns": ["uuga booga", "cave man brain", "UHHH AHAHH UUUHHHHEHEHEH HAHHUHUAH", "WTF"],
         "responses": ["Wow humans sure are stupid"],
+        "context_set": [""]
+    },
+    {"tag": "search",
+        "patterns": ["Search for something", "google this", "search on duckduckgo", "please search"],
+        "responses": ["Yeah. Will do"],
         "context_set": [""]
     }
 ]
