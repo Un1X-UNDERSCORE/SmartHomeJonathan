@@ -1,3 +1,0 @@
-# SmartHomeJonathan
-
-Home assistant
