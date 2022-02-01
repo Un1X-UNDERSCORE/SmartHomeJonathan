@@ -10,6 +10,8 @@ __pycache__/
 # My own gitignores
 speech/
 __pycache__/
+ 
+#.env
 
 assistant_model_classes.pkl
 assistant_model_words.pkl
@@ -113,7 +115,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env
 .venv
 env/
 venv/
