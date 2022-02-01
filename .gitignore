@@ -11,8 +11,6 @@ __pycache__/
 speech/
 __pycache__/
 
-.env
-
 assistant_model_classes.pkl
 assistant_model_words.pkl
 assistant_model.h5
