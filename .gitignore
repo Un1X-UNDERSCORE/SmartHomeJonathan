@@ -9,6 +9,7 @@ __pycache__/
 
 # My own gitignores
 speech/
+speech-backup/
 __pycache__/
 
 assistant_model_classes.pkl

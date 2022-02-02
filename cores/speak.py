@@ -11,6 +11,9 @@ try:
     from time import sleep
     environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     from pygame.mixer import init, music
+    from pygame import mixer
+    from cores.apiai import FifteenAPI
+    tts_api = FifteenAPI(show_debug=True)
     init()
 except:
     print("""You have to install the modules: pygame and gtts. Use: 'pip3 install pygame' and 'pip3 install gtts' to install the modules""")
@@ -30,15 +33,18 @@ def say(text):
     #Convert text to hash for file name
     filename = md5(text.encode()).hexdigest()
     #Make path
-    path = f"{dirr}{filename}.mp3"
+    path = f"{dirr}{filename}"
+    newpath = path + '.wav'
     #Check if file allready exists
-    if not exists(path):
+    if not exists(newpath):
         #If not generate the file
-        speak = gTTS(text=text, lang=lang, slow=False)
-        speak.save(path)
+        #speak = gTTS(text=text, lang=lang, slow=False)
+        #speak.save(path)
+        tts_api.save_to_file("GLaDOS", text, path)
     #Play the sound file
-    music.load(path)
-    music.play()
+    mixer.Sound(newpath).play()
+    #music.load(newpath)
+    #music.play()
 
 #Say function
 def ask(text):
@@ -53,8 +59,9 @@ def ask(text):
     #Check if file allready exists
     if not exists(path):
         #If not generate the file
-        speak = gTTS(text=text, lang=lang, slow=False)
-        speak.save(path)
+        #speak = gTTS(text=text, lang=lang, slow=False)
+        #speak.save(path)
+        tts_api.save_to_file("GLaDOS", text, path)
     #Play the sound file
     music.load(path)
     music.play()
