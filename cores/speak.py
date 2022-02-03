@@ -12,11 +12,12 @@ try:
     environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
     from pygame.mixer import init, music
     from pygame import mixer
-    from cores.apiai import FifteenAPI
-    tts_api = FifteenAPI(show_debug=True)
+    #from cores.apiai import FifteenAPI
+    #tts_api = FifteenAPI(show_debug=True)
     init()
-except:
+except Exception as es:
     print("""You have to install the modules: pygame and gtts. Use: 'pip3 install pygame' and 'pip3 install gtts' to install the modules""")
+    print(es)
     quit()
 
 #Make dir if not exists
@@ -38,9 +39,9 @@ def say(text):
     #Check if file allready exists
     if not exists(newpath):
         #If not generate the file
-        #speak = gTTS(text=text, lang=lang, slow=False)
-        #speak.save(path)
-        tts_api.save_to_file("GLaDOS", text, path)
+        speak = gTTS(text=text, lang=lang, slow=False)
+        speak.save(path)
+        #tts_api.save_to_file("GLaDOS", text, path)
     #Play the sound file
     mixer.Sound(newpath).play()
     #music.load(newpath)
@@ -59,9 +60,9 @@ def ask(text):
     #Check if file allready exists
     if not exists(path):
         #If not generate the file
-        #speak = gTTS(text=text, lang=lang, slow=False)
-        #speak.save(path)
-        tts_api.save_to_file("GLaDOS", text, path)
+        speak = gTTS(text=text, lang=lang, slow=False)
+        speak.save(path)
+        #tts_api.save_to_file("GLaDOS", text, path)
     #Play the sound file
     music.load(path)
     music.play()
