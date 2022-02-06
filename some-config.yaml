@@ -1,0 +1,50 @@
+type: entities
+show_header_toggle: true
+entities:
+  - type: custom:slider-entity-row
+    entity: light.rgbledstrip1
+    name: brightness
+  - type: custom:slider-entity-row
+    entity: light.rgbledstrip1
+    name: temperature
+    attribute: color_temp
+  - type: custom:slider-entity-row
+    entity: light.rgbledstrip1
+    name: Hue
+    attribute: hue
+  - type: custom:slider-entity-row
+    entity: light.rgbledstrip1
+    name: Saturation
+    attribute: saturation
+  - type: custom:rgb-light-card
+    entity: light.rgbledstrip1
+    justify: center
+    hide_when_off: true
+    colors:
+      - rgb_color:
+          - 234
+          - 136
+          - 140
+        brightness: 255
+        color_temp: 100
+        transition: 1
+      - rgb_color:
+          - 251
+          - 180
+          - 139
+        brightness: 200
+        transition: 1
+      - rgb_color:
+          - 136
+          - 198
+          - 237
+        brightness: 150
+        transition: 1
+      - rgb_color:
+          - 140
+          - 231
+          - 185
+        brightness: 100
+        transition: 1
+title: Jonathan room lights
+state_color: true
