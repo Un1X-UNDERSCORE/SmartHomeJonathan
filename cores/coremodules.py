@@ -7,7 +7,7 @@ from threading import Thread
 class core:
     # Add a note func
     def search(self):
-        q = ask('What do you want to search for? ')
+        # q = ask('What do you want to search for? ')
     def addnote(self):
         note = ask('what do you want to add to your notes? ')
         note = note.strip('\n')
