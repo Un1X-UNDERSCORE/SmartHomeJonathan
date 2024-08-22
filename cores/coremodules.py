@@ -6,9 +6,9 @@ from threading import Thread
 # Make core class
 class core:
     # Add a note func
-    def search():
+    def search(self):
         q = ask('What do you want to search for? ')
-    def addnote():
+    def addnote(self):
         note = ask('what do you want to add to your notes? ')
         note = note.strip('\n')
         # Open the text file
@@ -16,7 +16,7 @@ class core:
             f.write(f'\n{note}')
         say(f'Added {note} to your notes!')
     # List notes func
-    def listnotes():
+    def listnotes(self):
         # Open the text file
         with open('notes.txt', 'r+') as f:
             lines = f.readlines()
@@ -27,7 +27,7 @@ class core:
             for aaa in bruh:
                 say(aaa)
     # Remove a note func
-    def removenote():
+    def removenote(self):
         # Get the notes that has to get removed
         say('what do you want to remove from notes? ')
         note = input().lower()
